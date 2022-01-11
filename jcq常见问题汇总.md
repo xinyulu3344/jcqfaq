@@ -52,7 +52,7 @@
 
 2. 如果是开普勒、云交易、宙斯的用户，可以根据订单号，查询消息是否进入topic，步骤如下：
 
-   (1) 登录京东云控制台(https://jcq-console.jdcloud.com/topics)，消息队列JCQ - 消息查询。如果用的是云鼎，请登录云鼎控制台
+   (1) 登录京东云控制台( https://jcq-console.jdcloud.com/topics )，消息队列JCQ - 消息查询。如果用的是云鼎，请登录云鼎控制台
 
    (2) 选择地域、topic、Business ID，填入订单号，点击查询。如果查询不到消息，请联系下业务方确认消息是否正常发送。
 
@@ -87,7 +87,7 @@ The heart beat service for the channel localAddress: 10.0.0.3:44452, remoteAddre
 
 ### 4.3 报错topic不存在
 
-1. 确认ak/sk填写正确。ak/sk从https://uc.jdcloud.com/account/accesskey获取
+1. 确认ak/sk填写正确。ak/sk从 https://uc.jdcloud.com/account/accesskey 获取
 
 2. 确认代码中填入的是topic名称，而不是topic id
 
@@ -108,5 +108,5 @@ The heart beat service for the channel localAddress: 10.0.0.3:44452, remoteAddre
 
 ### 4.6 如何判断消费签名是否正确
 
-使用工具：https://github.com/xinyulu3344/jcqsign。该工具会返回签名计算过程中排序后的key、signSource和最终的签名
+使用工具：https://github.com/xinyulu3344/jcqsign 。该工具会返回签名计算过程中排序后的key、signSource和最终的签名
 
