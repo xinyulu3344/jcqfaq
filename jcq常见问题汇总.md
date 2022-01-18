@@ -67,13 +67,22 @@
 ### 4.1 连接超时
 
 ```
+com.jcloud.jcq.communication.exception.CommunicationTimeoutException: wait response on channel <Creating the Channel for the remote address jcq-hb-yd-001-manager-nlb-FI.jvessel-open-hb.jdcloud.com:2888 timeout.> but timeout 3000 with milliseconds
+```
+
+```
 exception:[com.jcloud.jcq.communication.exception.CommunicationException: ChannelFuture has been completed, but the channel localAddress: , remoteAddress:  is still not active!]
 ```
 
 该报错是因为网络不通，通常有如下几种原因: 
 
-1. 没有在和topic同地域的京东云VPC环境下连接jcq
-2. 在同地域云VPC环境下，但是云主机的安全组、子网关联的ACL没有放行相应网段。
+1. 没有在和topic同地域的京东云VPC环境下连接
+
+   解决方案：使用和topic同地域的京东云云主机连接。
+
+2. 在同地域云VPC环境下，但是云主机的安全组、子网关联的ACL没有放行JCQ服务相应网段(100.72.13.0/24)。
+
+   解决方案：安全组、ACL放行100.72.13.0/24。安全组、acl放行操作参考：https://docs.jdcloud.com/cn/virtual-private-cloud/security-group-configuration ，https://docs.jdcloud.com/cn/virtual-private-cloud/network-acl-configuration
 
 如果需要公网连接jcq，请参考第一节
 
