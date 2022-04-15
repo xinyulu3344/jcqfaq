@@ -119,3 +119,7 @@ The heart beat service for the channel localAddress: 10.0.0.3:44452, remoteAddre
 
 使用工具：https://github.com/xinyulu3344/jcqsign 。该工具会返回签名计算过程中排序后的key、signSource和最终的签名
 
+### 4.7 topic无法删除
+
+只有topic所有者有权限删除topic。如果是授权订阅的topic，那么订阅方是没有权限删除topic的，需要联系topic所有者删除。对于开普勒、云交易、宙斯等用户，可以到 https://open.jd.com/home/home#/support/ask 提交工单咨询。
+
